@@ -1,0 +1,278 @@
+#include<iostream>
+#include <stdlib.h> 
+#include<conio.h>
+#include <time.h>
+#include<math.h>
+using namespace std ;
+ void cerceve1(){
+ 	system("color 5F");
+	char sekil1=(char)201;
+	cout<<"\t\t\t\t"<<sekil1;
+	char duz=(char)205;
+	
+	for(int i=0;i<48;i++)
+	{
+		cout<<duz;
+	}
+	char sekil2=(char)187;
+	cout<<sekil2<<endl;
+	
+	char dik=(char)186;
+	for(int a=1;a<7;a++)
+	{
+    cout<<"\t\t\t\t"<<dik<<"\t\t\t\t\t\t "<<dik<<endl;
+    if(a==3)
+	{
+    cout<<"\t\t\t\t"<<dik<<"\t\tSAYI  TAHMIN  OYUNU"<<" \t\t "<<dik<<endl;
+		
+	}
+	}
+	char sekil3=(char)200;
+	cout<<"\t\t\t\t"<<sekil3;
+	
+	char duz1=(char)205;
+	for(int i=0;i<48;i++)
+	{
+		cout<<duz1;
+		
+	}
+	char sekil4=(char)188;
+	cout<<sekil4<<endl;
+	}
+    void cerceve2(){
+		system("color 2F");
+	
+	char sekil1=(char)201;
+	cout<<"\t\t\t\t"<<sekil1;
+	char duz=(char)205;
+	
+	for(int i=0;i<64;i++)
+	{
+		cout<<duz;
+		
+	}
+	char sekil2=(char)187;
+	cout<<sekil2<<endl;
+	
+	char dik=(char)186;
+	for(int a=1;a<17;a++)
+	{
+    cout<<"\t\t\t\t"<<dik<<"\t\t\t\t\t\t\t\t "<<dik<<endl;
+    if(a==5)
+	{
+    cout<<"\t\t\t\t"<<dik<<"\t\t  SAYI  TAHMIN  OYUNUNA "<<" \t\t\t "<<dik<<endl;
+		
+	}else if(a==6)
+	{
+	 cout<<"\t\t\t\t"<<dik<<"\t\t\t HOSGELDINIZ "<<"\t\t\t\t "<<dik<<endl;	
+		
+	}else if(a==8)
+	{
+     cout<<"\t\t\t\t"<<dik<<"\t\t 6 adet sayi tahmin ediniz "<<" \t\t\t "<<dik<<endl;
+	}else if(a==9)
+	{
+	cout<<"\t\t\t\t"<<dik<<"\t\t Devam etmek icin D ya da d tusuna basiniz !" <<" \t "<<dik<<endl;
+	}else if(a==10)
+	{
+    cout<<"\t\t\t\t"<<dik<<"\t\t CIKIS yapmak icin ESC'ye basiniz."<<" \t\t "<<dik<<endl;
+    
+    }
+	}
+	char sekil3=(char)200;
+	cout<<"\t\t\t\t"<<sekil3;
+	
+	char duz1=(char)205;
+	for(int i=0;i<64;i++)
+	{
+		cout<<duz1;
+		
+	}
+	char sekil4=(char)188;
+	cout<<sekil4;
+}
+    int main (){
+ 	
+	int sayi1,sayi2,sayi3,sayi4,sayi5,sayi6;
+	int r1,r2,r3,r4,r5,r6;
+    int tahmin =0;
+	int sonucdegeri;
+	int sonuc;
+	int skor1=0,skor2=0,skor3=0,skor4=0,skor5=0,skor6=0,skor=0;
+	int e = 1;
+	int sayilar[6];
+	
+	for (int w = 0 ; w < e; w++){
+		e++;
+	char tus,tus1,tus2;
+	int z = 1;
+    cerceve2();   
+    tus = getch();
+    system("cls");
+	
+    if(tus == 'D' || tus=='d'){
+   
+   
+      do{
+    if (z == 2){	
+    cerceve2 ();
+    tus = getch();
+    system("cls");
+}
+z++;
+    if (tus== 'd' || tus  == 'D'){ 
+	
+	     cerceve1();
+		cout<<"\t\t\t\t1.sayiyi giriniz : " ;
+		cin>>sayi1;
+		system("CLS");
+		
+		cerceve1();
+		cout<<"\t\t\t\t2.sayiyi giriniz : " ;
+		cin>>sayi2;
+		system("CLS");
+		
+	    cerceve1();
+		cout<<"\t\t\t\t3.sayiyi giriniz : " ;
+		cin>>sayi3;
+		system("CLS");
+		
+	    cerceve1();
+		cout<<"\t\t\t\t4.sayiyi giriniz : " ;
+		cin>>sayi4;
+		system("CLS");
+		
+		cerceve1();
+		cout<<"\t\t\t\t5.sayiyi giriniz : " ;
+		cin>>sayi5;
+		system("CLS");
+		
+	    cerceve1();
+	    cout<<"\t\t\t\t6.sayiyi giriniz : " ;
+		cin>>sayi6; 
+		
+			
+       srand(time(0));
+       for(int i = 0; i<6; i++){
+	   
+	   sayilar[i] = rand() %50+1;     
+  }
+		
+		cout<<"\n\t\t\t\tGirilen sayiler : "<<"\t"<<sayi1<<"\t"<<sayi2<<"\t"<<sayi3<<"\t"<<sayi4<<"\t"<<sayi5<<"\t"<<sayi6<<endl;	  
+		cout<<"\n\t\t\t\tUretilen sayilar : "<<"\t"<<sayilar[0]<<"\t"<< sayilar[1]<<"\t"<<sayilar[2]<<"\t"<<sayilar[3]<<"\t"<<sayilar[4]<<"\t"<<sayilar[5]; 
+	
+	if(sayi1==sayilar[0]){
+      skor1=skor1+1;
+      	
+      }if(sayi2==sayilar[1]){
+	  
+        skor2=skor2+1;
+      }if(sayi3==sayilar[2]){
+	  
+        skor3=skor3+1;
+      }if(sayi4==sayilar[3]){
+	  
+        skor4=skor4+1;
+      }if(sayi5==sayilar[4]){
+	  
+        skor5=skor5+1;
+      }if (sayi6==sayilar[5]){
+	  
+        skor6=skor6+1;
+    }
+      
+    tahmin=skor1+skor2+skor3+skor4+skor5+skor6;
+    cout<<"\n\n\t\t\t\tTahmin  : " <<tahmin;
+     
+    
+	if(tahmin==0){
+      	cout<<"\n\n\t\t\t\tMaalesef hic bir seyi bilemediniz . ";
+	  }else if(tahmin==6){
+	  	cout<<"\n\n\t\t\t\tTebrikler bütün sayıları doğru tahmin ettiniz :) ";
+	  	
+	  	}else{
+		cout << "\n\n\t\t\t\t"<< "Tebrikler " << tahmin << " sayi bildiniz. ";
+		
+		}
+		
+
+    sonucdegeri=10*tahmin;
+   
+    	
+    if(tahmin==0){
+    	cout<<"sonuc:0";
+	}else if(tahmin==1){
+		cout<<"sonuc:10";
+	}else if(tahmin==2){
+		cout<<"sonuc:100";
+	}else if(tahmin==3){
+		cout<<"sonuc:1000";
+	}else if(tahmin==4){
+		cout<<"sonuc:10000";
+	}else if(tahmin==5){
+		cout<<"sonuc:100000";
+	}else if(tahmin==6){
+		cout<<"sonuc:1000000";
+	}
+		
+      cout<<"\n"<<endl;
+	  cout << "\t\t\t\tYeniden denemek icin bir tusa basiniz " << endl;
+      tus1= getch();
+      if(tus1!= 27){
+      	system("cls");
+      	cerceve2();
+      	break;
+      }	
+  }
+	  
+	}while (tus != 27 && tus1 != 27); 
+	
+}
+    int n =2;
+    for(int s = 1; s < n; s ++){
+	n++;
+	
+    if(tus==27){
+    cerceve2();
+    cout << "\nCikmak istediginizden emin misiniz? (E/H)" << endl;
+    char tus3;
+    tus3 = getch();
+    if(tus3 == 'e' || tus3=='E'){
+    	system ("cls");
+        exit(0);
+        break;
+    }
+	else if(tus3 == 'h' || tus3=='H'){
+		system ("cls");
+		break;
+	}
+	else{
+		system ("cls");
+		break;
+	}
+	}
+    if(tus1==27){
+    cout << "Cikmak istediginizden emin misiniz? (E/H)" << endl;
+    char tus3;
+    tus3 = getch();
+    if(tus3 == 'e' || tus3=='E'){
+    	system ("cls");
+        exit(0);
+        break;
+    }
+	else if(tus3 == 'h' || tus3=='H'){
+		system ("cls");
+		break;
+	}
+	else{
+		system ("cls");
+		break;
+	}
+	continue;
+}
+}
+
+    system("color 2F");
+	system("cls");
+  }
+return 0 ;
+}
