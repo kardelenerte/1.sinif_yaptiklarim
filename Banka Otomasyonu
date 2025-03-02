@@ -1,0 +1,82 @@
+#include<math.h>
+#include<conio.h>
+#include<iostream>
+
+//Dev C++ ile yazılmıştır.
+//Kardelen ERTE 
+
+int main (){
+	
+	char bnk[]="\n\n\n\t\t\t\t\t ERTE BANKASINA HOSGELDINIZ \n\t\t\t\t\t-----------------------------------\n";
+	int sifre,islem ,bakiye, miktar;
+	bakiye = 1000 ;
+	sifre = 1234 ;
+	system("color B9");
+	printf("%s",bnk);
+	//miktar = çekmek istediğimiz miktar
+	//bakiye = banka da olan para
+	
+    printf("\t\t\t\t\t Lutfen Sifrenizi Giriniz : ") ;
+	scanf("%d",&sifre);
+	system("cls");
+	
+	if(sifre==1234)
+	{
+	
+	  printf("%s",bnk);
+	  system("color B9");
+	  printf("\t\t\t\t\t Sifre Dogru\n\n",sifre);
+	  printf("\t\t\t\t\t Hangi islemi yapmak istiyorsunuz? \n\n");
+      printf("\t\t\t\t\t 1-Bakiye Ogrenme\t\t\t\n");
+	  printf("\t\t\t\t\t 2-Para Cekme \t\t\t\n");
+	  printf("\t\t\t\t\t 3-Cikis \t\t\t\n");
+	  printf("\t\t\t\t\t Lutfen bir islem seciniz : ");
+	  scanf("%d",&islem);
+	  system("cls");
+	  
+	
+    switch(islem)
+	{
+	system("color B9");
+	case 1:printf("%s",bnk);
+	  printf("\t\t\t\t\tHesabinizda 1000 tl var.");
+	  break;
+	
+	case 2:printf("%s",bnk);
+	  printf("\t\t\t\t\tCekmek istediginiz miktari giriniz : ");
+	  scanf("%d",&miktar);
+	  
+	  
+	if (bakiye>=miktar){
+		   system("cls");
+		   printf("%s",bnk);
+		   printf("\t\t\t\t\tCekmek istediginiz miktar YETERLIDIR. \n ");
+		   printf("\t\t\t\t\tKalan Bakiye = %d\n\n\n\n\n",bakiye-miktar);
+		   
+	}
+	else
+	{
+
+	system("color 80");
+	printf("\t\t\t\t\tYetersiz Bakiye :(\n\n\n\n\n");
+	}
+	break;
+		
+		
+	case 3:printf("%s",bnk);
+	  printf("\t\t\t\t\t Basarili bir sekilde cikis yaptiniz \n \t\t\t\t\t Yine bekleriz :) \n\n\n\n\n ");
+	  system("color 80");
+	  break;
+	  default :printf("%s",bnk);
+	  printf("\t\t\t\t\t Hatali bir secim yaptiniz !!! Lutfen 1,2 ya da 3 seciniz .\n\n\n\n\n");
+	  system("color 80");
+	}
+	}else
+	{
+		system("cls");
+		printf("%s",bnk);
+		printf("\t\t\t\t\t Hatali sifre !!! \n \t\t\t\t\t Yine bekleriz\n\n\n\n\n");
+		system("color 80");
+	}
+	return 0 ;	
+    }
